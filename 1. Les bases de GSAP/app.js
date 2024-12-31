@@ -41,3 +41,21 @@ btnCat.addEventListener('click',() => {
         repeat:2,
         repeatDelay:2})
 })
+
+gsap.to('.container-images img:nth-child(3)',{
+    keyframes:[
+        {duration:0.3,y:100},
+        {duration:0.3,scale:1.3},
+        {duration:0.3,y:200},
+    ]
+})
+
+const complete = () => console.log("complete")
+gsap.to('.container-images img:nth-child(3)',{
+    y:100,
+    repeat:1,
+    onComplete:complete,
+    // onStart:() => console.log('onStart'),
+    // onUpdate:() => console.log('onUpdate'),
+    // onRepeat:() => console.log('onRepeat')
+})
